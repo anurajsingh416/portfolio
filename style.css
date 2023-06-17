@@ -5,37 +5,41 @@
 }
 html{
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 body{
     color: #080808;
-    display: block;
 }
 /* ------------------------------------home--------------------------------------- */
 #header{
     height:100vh;
     width: 100%;
+    background-attachment:fixed;
     background-image: url(full_img.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 .nav-bar{
-    list-style-type: none;
     display: flex;
     justify-content: left;
     padding-left:20px;
     background-color: #6047ff;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .nav-links{
-    padding-left:40px;
-    margin: 8px 0px;
+    list-style-type: none;
+    margin: 0px 30px;
+    padding: 10px 0px;
+    display: block;
+    position: relative;
 }
 .nav-links a{
+    height:100vh;
     color:white;
     font-size: 20px;
     text-decoration:none;
-    position: relative;
-    top:10px;
     transition:0.3s;
 }
 .nav-links a:after{
@@ -45,20 +49,21 @@ body{
     height:3px;
     background-color: #fff;
     left:0;
-    bottom:-6px;
+    bottom:6px;
     transition: 0.3s;
 }
 .nav-links a:hover::after{
     width: 100%;
 }
-.logo{
-    height:40px;
+.nav-links .logo{
+    font-size:35px;
+    font-weight: 700;
 }
-.account{
-    height: 40px;
-    border-radius:50%;
-    position: relative;
-    right:-500px;
+.nav-links .logo span{
+    color: red;
+}
+.nav-bar .fas{
+    display: none;
 }
 .name{
     color:#6047ff;
@@ -66,8 +71,11 @@ body{
 .info{
     position:relative;
     display: inline-block;
-    top:250px;
+    margin-top: 20%;
     left:10%;
+}
+.info h1{
+    font-size: 400%;
 }
 .info h4{
 font-size: 200%;
@@ -77,8 +85,8 @@ font-size: 200%;
     height: 100vh;
     width:100%;
     padding: 80px 0px;
-    color: #fff;
-    background-color:rgb(0, 0, 0);
+    color: #000;
+    background-color:rgb(255, 255, 255);
 }
 .container{
     padding: 0px 10%;
@@ -89,7 +97,7 @@ li{
 .row{
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     justify-content: space-between;
 }
 .about-col-1{
@@ -126,6 +134,7 @@ li{
 .sub-titles{
     font-size: 400%;
 }
+
 .tab-links::after{
     content:'';
     background: #22eaff;
@@ -342,8 +351,102 @@ form input,form textarea{
     transform: translateY(-2px);
     scale: 1.1;
 }
-@media only screen  and (max-width: 600px){
-#header{
-    background: url(phone_full_img.png);
+@media only screen  and (max-width: 730px){
+body,html{
+    overflow-x: hidden;
 }
+#header{
+    background: url(phone_full_img1.png);
+    background-repeat: no-repeat;
+    background-size: 425px 533px;
+}
+.nav-bar{
+    display: block;
+    position: relative;
+}
+.nav-bar .a{
+    display: none;
+}
+.nav-links a:hover::after{
+    width: 20%;
+}
+.nav-links .logo:hover::after{
+    width: 0;
+}
+.nav-bar .fas.fa-times{
+    color:#fff;
+    display: none;
+    position: absolute;
+    top:8%;
+    right: 8%;
+    font-size: 30px;
+}
+.nav-bar .fas.fa-bars{
+    color:#fff;
+    display:block;
+    position: absolute;
+    top:30%;
+    right: 8%;
+    font-size: 30px;
+}
+#about{
+    margin-bottom: 50%;
+}
+.logo{
+    border-bottom:1px solid #ccc;
+}
+.info h4{
+    font-size: 16px;
+}
+.info h1{
+    font-size:30px;
+}
+.sub-titles{
+    font-size: 40px;
+}
+.info{
+    margin-top:83%;
+}
+.tab-links{
+    font-size:16px;
+    margin-right:20px;
+}
+.user{
+    display: block;
+    width: 100%;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+} 
+.about-col-1,.about-col-2{
+    flex-basis:100%;
+}
+.about-col-1{
+    margin-bottom:30px;
+}
+.about-col-2{
+    font-size:14px;
+}
+}
+@media only screen  and (min-width: 731px){
+.nav-bar{
+    position: relative;
+}
+
+.nav-bar .fas{
+    position: absolute;
+    left:-30px;
+}
+.nav-bar .a{
+    display: block !important;
+}
+.info{
+    margin-top: 20% !important;
+}
+}
+@media only screen  and (max-width: 375px){
+    #header{
+        background-size: 375px 533px;
+    }
 }
