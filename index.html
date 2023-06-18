@@ -18,7 +18,7 @@
             <li class="nav-links a"><a href="#about"  >About</a></li>
             <li class="nav-links a"><a href="#services"  >Services</a></li>
             <li class="nav-links a"><a href="#portfolio"  >Portfolio</a></li>
-            <li class="nav-links a"><a href="anurajjj217@gmail.com"  >Contact</a></li>
+            <li class="nav-links a"><a href="#contact"  >Contact</a></li>
             <i class="fas fa-times" id="close" onclick="closemenu()"></i>
             <i class="fas fa-bars" id="open" onclick="openmenu()"></i>
         </ul>
@@ -162,11 +162,11 @@
                 <a href="my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-col-2">
-                <form action="">
-                    <input type="text" name="name" id="" required placeholder="Your Name">
-                    <input type="email" name="email" id="" required placeholder="Your Email">
-                    <textarea name="message" id="" cols="30" rows="6" required placeholder="Your Message"></textarea>
-                    <input type="submit" class="btn btn2" onclick="message()">
+                <form action="mailto:anurajjj217@gmail.com" method="get" enctype="text/plain">
+                    <input type="text" name="subject" required placeholder="Your Name">
+                    <input type="email" name="email" required placeholder="Your Email">
+                    <textarea name="body" id="" cols="30" rows="6" required placeholder="Your Message"></textarea>
+                    <input type="submit" class="btn btn2" ">
                 </form>
             </div>
         </div>
