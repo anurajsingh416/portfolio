@@ -318,6 +318,9 @@ form input,form textarea{
     color: #fff;
     border:1px solid #00b7ff;
 }
+.btn.btn2:focus{
+    background:#00c7fe;
+}
 .copyright{
     text-align: center;
     padding: 25px 0;
